@@ -1,0 +1,9 @@
+---
+layout: compress
+---
+{% include css/base.css %}
+{% include css/headers.css %}
+{% include css/buttons.css %}
+{% include css/pages.css %}
+
+

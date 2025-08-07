@@ -1,0 +1,30 @@
+baseurl: ''
+url: 'https://vacacionesopitas.com'
+name: Vacaciones Opitas
+title: Vacaciones Opitas | Viajes y Turismo en el Huila
+description: Blog de viajes y turismo en el Huila, Colombia. Encuentra información sobre destinos turísticos, hoteles, restaurantes y actividades para hacer en el departamento del Huila.
+permalink: /:slug/
+
+collections:
+  redirects:
+    output: true
+  servicios:
+    output: true
+    permalink: /servicios/:path
+  posts:
+    output: true
+    permalink: /blog/:slug
+
+markdown: kramdown
+
+keep_files: [/assets/img]
+
+compress_html:
+    clippings: []
+    comments: []
+    endings: []
+    ignore:
+    envs: []
+    blanklines: false
+    profile: false
+    startings: []

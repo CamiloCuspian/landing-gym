@@ -1,0 +1,49 @@
+.buttons {
+  display: inline-block;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  padding: 20px 32px;
+  text-align: center;
+  font-weight: 700;
+  color: white;
+  font-size: 20px;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border-radius: 32px;
+}
+
+.buttons:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Primary button */
+.btn-primary {
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background: rgb(35,35,35);
+  background: linear-gradient(90deg, rgb(189, 133, 12) 0%, rgb(186, 143, 35) 35%, rgb(230, 199, 106) 75%, rgb(232, 219, 105) 83%);;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  background: rgb(35,35,35);
+  background: linear-gradient(245deg, rgb(209, 137, 12) 0%, rgb(209, 164, 14) 35%, rgb(206, 166, 65) 75%, rgb(230, 188, 61) 83%);
+}
+
+/* Secondary button */
+.btn-secondary {
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background: transparent;
+  border: 2px solid var(--color-main);
+  color: var(--color-main);
+  border-radius: var(--radius);
+
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  background: var(--color-main);
+  color: var(--color-white);
+}
