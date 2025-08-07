@@ -35,7 +35,7 @@ img {
   z-index: 0;
 
   & > div {
-    flex: 1 0 380px;
+    flex: 1 0 280px;
     width: min(100%, 680px);
   }
 
