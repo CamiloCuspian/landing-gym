@@ -18,18 +18,28 @@
 
 .redes {
   display: flex;
-  gap: 4rem;  
+  gap: 4rem;
 }
 
-.filter {
-  img {
-    -webkit-filter: drop-shadow(0 0 8px #ff9500) 
-          drop-shadow(0 0 15px rgba(255, 149, 0, 0.6))
-          drop-shadow(0 0 25px rgba(255, 149, 0, 0.3));
-            filter: drop-shadow(0 0 8px #ff9500) 
-          drop-shadow(0 0 15px rgba(255, 149, 0, 0.6))
-          drop-shadow(0 0 25px rgba(255, 149, 0, 0.3));
-  }
+img {
+  -webkit-filter: drop-shadow(0 0 8px #ff9500)
+    drop-shadow(0 0 15px rgba(255, 149, 0, 0.6))
+    drop-shadow(0 0 25px rgba(255, 149, 0, 0.3));
+  filter: drop-shadow(0 0 8px #ff9500)
+    drop-shadow(0 0 15px rgba(255, 149, 0, 0.6))
+    drop-shadow(0 0 25px rgba(255, 149, 0, 0.3));
+  transition: transform 0.3s ease, -webkit-filter 0.3s ease;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  transition: transform 0.3s ease, filter 0.3s ease, -webkit-filter 0.3s ease;
+}
+img:hover {
+  transform: scale(1.03);
+  -webkit-filter: drop-shadow(0 0 10px #ffae00)
+    drop-shadow(0 0 20px rgba(255, 174, 0, 0.6))
+    drop-shadow(0 0 30px rgba(255, 174, 0, 0.3));
+          filter: drop-shadow(0 0 10px #ffae00)
+    drop-shadow(0 0 20px rgba(255, 174, 0, 0.6))
+    drop-shadow(0 0 30px rgba(255, 174, 0, 0.3));
 }
 
 /* footer */
@@ -89,7 +99,6 @@ footer small {
 
 @media (max-width: 768px) {
   .cards-grid {
-      grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 }
-
