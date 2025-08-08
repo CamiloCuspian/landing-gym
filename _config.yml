@@ -4,6 +4,8 @@ name: Vacaciones Opitas
 title: Vacaciones Opitas | Viajes y Turismo en el Huila
 description: Blog de viajes y turismo en el Huila, Colombia. Encuentra información sobre destinos turísticos, hoteles, restaurantes y actividades para hacer en el departamento del Huila.
 permalink: /:slug/
+telefono: 3164400207
+email: comercial@clicfit.co
 
 markdown: kramdown
 

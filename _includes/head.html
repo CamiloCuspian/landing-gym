@@ -118,6 +118,7 @@
         font-family: var(--font);
         background-color: var(--color-white);
         box-sizing: border-box;
+        color: var(--color-fonts);
       }
     
       h1,
@@ -137,22 +138,22 @@
       }
 
       .wrapper {
-        padding: 8em 0 4em;
-        width: min(calc(100% - 2rem), 1440px);
+        width: min(calc(100% - 2rem), 1360px);
         margin-inline: auto;
+        padding: 8em 0 4em;
       }
       
       .two_columns {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        gap: 2rem;
+        gap: 3em;
         position: relative;
         z-index: 0;
 
         & > * {
           flex: 1 0 280px;
-          width: min(100%, 680px);
+          max-width: 100%;
         }
 
         p {
