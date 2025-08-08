@@ -1,5 +1,5 @@
 # robots.txt for Vacaciones Opitas
-# {{ site.url }}{{ site.baseurl }}/
+# https://clicfit.co
 
 # Allow legitimate search engines
 User-agent: Googlebot
@@ -114,10 +114,10 @@ Allow: /feed.xml
 Crawl-delay: 10
 
 # Sitemaps
-Sitemap: {{ site.url }}{{ site.baseurl }}/sitemap.xml
+Sitemap: https://clicfit.co/sitemap.xml
 
 # Define preferred domain
-Host: {{ site.url | replace: 'https://', '' | replace: 'http://', '' }}
+Host: https://clicfit.co
 
 # Additional Security Headers (add these to your .htaccess or server config)
 # X-Robots-Tag: noarchive, noimageindex
