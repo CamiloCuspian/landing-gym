@@ -28,14 +28,12 @@ h4 {
   margin-top: 0.5em;
 }
 
-h5 {
-  font-size: clamp(1rem, 1.2rem + 1.2vw, 1.4rem);
-  color: var(--color-accent);
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: -0.02em;
-  line-height: 1.12;
-  margin-bottom: 1.5em;
+.highlight{
+  background: var(--color-main);
+  color: var(--color-white);
+  padding: 0.1em 0.3em;
+  border-radius: var(--radius-cards);
+  font-weight: 600;
 }
 
 ul li::marker {
