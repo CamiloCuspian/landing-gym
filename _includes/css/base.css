@@ -48,12 +48,30 @@ small {
 }
 
 img {
-  border-style: none;
   max-width: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
+  height: auto;
+  display: block;
+
+  -webkit-filter: drop-shadow(0 0 8px #ff9500)
+    drop-shadow(0 0 15px rgba(255, 149, 0, 0.6))
+    drop-shadow(0 0 25px rgba(255, 149, 0, 0.3));
+  filter: drop-shadow(0 0 8px #ff9500)
+    drop-shadow(0 0 15px rgba(255, 149, 0, 0.6))
+    drop-shadow(0 0 25px rgba(255, 149, 0, 0.3));
+  transition: transform 0.3s ease, -webkit-filter 0.3s ease;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  transition: transform 0.3s ease, filter 0.3s ease, -webkit-filter 0.3s ease;
 }
 
+img:hover {
+  transform: scale(1.03);
+  -webkit-filter: drop-shadow(0 0 10px #ffae00)
+    drop-shadow(0 0 20px rgba(255, 174, 0, 0.6))
+    drop-shadow(0 0 30px rgba(255, 174, 0, 0.3));
+  filter: drop-shadow(0 0 10px #ffae00)
+    drop-shadow(0 0 20px rgba(255, 174, 0, 0.6))
+    drop-shadow(0 0 30px rgba(255, 174, 0, 0.3));
+}
 .flow > * + * {
   margin-top: 1em;
 }
@@ -102,8 +120,36 @@ img {
   text-align: center;
 }
 
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.boton-whatsapp {
+  position: fixed;
+  bottom: 6rem;
+  right: 20px;
+  z-index: 100;
+  -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390,0.575,0.565,1.000) 0.5s 6 alternate-reverse both;
+  animation: scale-up-center 0.4s cubic-bezier(0.390,0.575,0.565,1.000) 0.5s 6 alternate-reverse both;
+  transition: all .2s ease-in-out;
+  width: max-content;
+  text-decoration: none;
+}
+
+.boton-whatsapp img{
+  box-shadow: none;
+  display: inline-block;
+}
+
+@media screen and (width >=800px) {
+  .boton-whatsapp::before {
+    content: "¡Contáctanos!";
+    font-size: 14px;
+    color: white;
+    background-color: #2eda2e83;
+    border: 3px solid white;
+    padding: 8px;
+    border-radius: 8px;
+  }
+}
+
+.boton-whatsapp:hover {
+  -webkit-filter: drop-shadow(5px 5px 5px rgba(190, 190, 190, .7));
+  filter: drop-shadow(5px 5px 5px rgba(190, 190, 190, .7));
 }
