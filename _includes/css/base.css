@@ -41,7 +41,7 @@ ol{
   padding-bottom: 1 em;
 
   li::marker{
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-weight: 700;
   }
 }
