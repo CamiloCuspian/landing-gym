@@ -1,49 +1,168 @@
+/* Botones Base - Material Design 2025 */
 .buttons {
-  display: inline-block;
-  width: -webkit-max-content;
-  width: -moz-max-content;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: max-content;
-  height: -webkit-min-content;
-  height: -moz-min-content;
   height: min-content;
-  padding: 20px 32px;
+  padding: 18px 36px;
   text-align: center;
   font-weight: 700;
-  color: white;
-  font-size: clamp(0.8rem, 2vw, 1.5rem);
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  border-radius: 32px;
+  font-family: var(--font);
+  color: var(--color-white);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--shadow);
+  letter-spacing: 0.5px;
+  text-transform: none;
+}
+
+.buttons::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .buttons:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
+  box-shadow: 
+    0 16px 40px rgba(0, 0, 0, 0.2),
+    0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Primary button */
+.buttons:hover::before {
+  left: 100%;
+}
+
+.buttons:active {
+  transform: translateY(-2px);
+  transition: transform 0.1s ease;
+}
+
+/* Botón Primario */
 .btn-primary {
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  background: rgb(35,35,35);
-  background: linear-gradient(90deg, rgb(189, 133, 12) 0%, rgb(186, 143, 35) 35%, rgb(230, 199, 106) 75%, rgb(232, 219, 105) 83%);;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 
+    0 12px 30px rgba(162, 106, 9, 0.4),
+    0 6px 15px rgba(0, 0, 0, 0.1);
 }
 
 .btn-primary:hover {
-  transform: translateY(-2px);
-  background: rgb(35,35,35);
-  background: linear-gradient(245deg, rgb(209, 137, 12) 0%, rgb(209, 164, 14) 35%, rgb(206, 166, 65) 75%, rgb(230, 188, 61) 83%);
+  background: linear-gradient(135deg, 
+    hsl(from var(--color-main) h s calc(l + 10%)) 0%, 
+    hsl(from var(--color-primary) h s calc(l + 10%)) 100%);
+  box-shadow: 
+    0 20px 50px rgba(162, 106, 9, 0.5),
+    0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* Secondary button */
+/* Fallback para navegadores sin soporte de hsl() relative colors */
+@supports not (color: hsl(from white h s l)) {
+  .btn-primary:hover {
+    background: linear-gradient(135deg, #252158 0%, #ff7842 100%);
+  }
+}
+
+/* Botón Secundario */
 .btn-secondary {
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  background: transparent;
+  background: #ffffff;
   border: 2px solid var(--color-main);
   color: var(--color-main);
-  border-radius: var(--radius);
+  border-radius: 50px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 
+    0 8px 20px rgba(162, 106, 9, 0.2),
+    0 4px 10px rgba(0, 0, 0, 0.05);
+  position: relative;
+  z-index: 1;
+}
 
+.btn-secondary::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--color-main) 0%, var(--color-secondary) 100%);
+  border-radius: 50px;
+  z-index: -1;
+  transform: scale(0);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-secondary:hover {
-  transform: translateY(-2px);
-  background: var(--color-main);
   color: var(--color-white);
+  border-color: transparent;
+  box-shadow: 
+    0 16px 40px rgba(162, 106, 9, 0.4),
+    0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary:hover::after {
+  transform: scale(1);
+}
+
+/* Estados de enfoque para accesibilidad */
+.buttons:focus {
+  outline: none;
+  box-shadow: 
+    var(--shadow),
+    0 0 0 3px rgba(162, 106, 9, 0.3);
+}
+
+/* Estados deshabilitado */
+.buttons:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: var(--shadow) !important;
+}
+
+.buttons:disabled::before {
+  display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .buttons {
+    padding: 16px 28px;
+    font-size: 1rem;
+    border-radius: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .buttons {
+    padding: 14px 24px;
+    font-size: 0.95rem;
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+/* Variante de botón pequeño */
+.buttons.btn-small {
+  padding: 12px 24px;
+  font-size: 0.9rem;
+  border-radius: 30px;
+}
+
+/* Variante de botón grande */
+.buttons.btn-large {
+  padding: 24px 48px;
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  border-radius: 60px;
 }
