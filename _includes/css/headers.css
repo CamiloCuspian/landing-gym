@@ -5,8 +5,9 @@
   width: 100%;
   position: relative;
   color: var(--color-white);
-  background: 
-    url('{{ "img/clicfit-ejercicios-en-casa-desktop.avif" | relative_url }}') center/cover no-repeat;
+  background:
+      linear-gradient(135deg, rgba(74, 74, 114, 0.3) 0%, rgba(26, 26, 46, 0.5) 100%),
+      url('{{ "img/clicfit-ejercicios-en-casa-desktop.avif" | relative_url }}') center/cover no-repeat;
   
     .hero {
     position: relative;
@@ -17,8 +18,8 @@
     
     .hero_content {
       width: min(100% - 600px);
-      
     }
+
     img {
       width: 100%;
       height: auto;
@@ -32,19 +33,33 @@
 }
 
 /* Tablet (768px - 1024px) */
-@media (max-width: 1024px) and (min-width: 769px) {
+@media (max-width: 1024px) {
   .header_hero {
-    background: 
-      linear-gradient(135deg, rgba(74, 74, 114, 0.8) 0%, rgba(26, 26, 46, 0.9) 100%),
-      url('{{ "img/clicfit-ejercicios-en-casa-tablet.avif" | relative_url }}') center/cover no-repeat;
-    
-    min-height: 55vh;
-    
+    padding: 6rem 0 4rem;
+
     .hero {
-      padding: 6rem 0 3rem;
+      padding: 0 1rem;
+      display: grid;
+      place-items: center;
+      
+      img{display: none;}
       
       .hero_content {
-        width: min(100% - 400px);
+        display: grid;
+        place-items: center;
+        width: 100%;
+        text-align: center;
+        gap: 1em;
+
+        p{margin: 0;}
+
+        ol{
+          padding: 0;
+
+          li{
+            list-style: none;
+          }
+        }
       }
     }
   }
@@ -53,32 +68,8 @@
 /* Mobile (hasta 768px) */
 @media (max-width: 768px) {
   .header_hero {
-    background: 
-      linear-gradient(135deg, rgba(74, 74, 114, 0.85) 0%, rgba(26, 26, 46, 0.9) 100%),
+    background:
       url('{{ "img/clicfit-ejercicios-en-casa-mobile.avif" | relative_url }}') center/cover no-repeat;
-    
-    min-height: 50vh;
-    
-    .hero {
-      padding: 4rem 0 2rem;
-      
-      /* En móvil, la imagen del contenido se muestra debajo del texto */
-      .two_columns {
-        flex-direction: column;
-        gap: 2rem;
-      }
-      
-      .hero_content {
-        width: 100%;
-        max-width: 400px;
-        margin: 0 auto;
-        
-      }
-    }
-    img {
-      min-width: 250px;
-      border-radius: 12px;
-    }
   }
 }
 
@@ -88,7 +79,7 @@
     min-height: 45vh;
     
     .hero {
-      padding: 3rem 0 2rem;
+      padding: 3rem 0 0;
       
       .hero_content {
         max-width: 320px;
@@ -106,7 +97,6 @@
 @supports (background: image-set()) {
   .header_hero {
     background: 
-      linear-gradient(135deg, rgba(74, 74, 114, 0.8) 0%, rgba(26, 26, 46, 0.9) 100%),
       image-set(
         url('{{ "img/clicfit-ejercicios-en-casa-desktop.webp" | relative_url }}') type("image/webp"),
         url('{{ "img/clicfit-ejercicios-en-casa-desktop.avif" | relative_url }}') type("image/avif"),
@@ -117,7 +107,6 @@
   @media (max-width: 1024px) and (min-width: 769px) {
     .header_hero {
       background: 
-        linear-gradient(135deg, rgba(74, 74, 114, 0.8) 0%, rgba(26, 26, 46, 0.9) 100%),
         image-set(
           url('{{ "img/clicfit-ejercicios-en-casa-tablet.webp" | relative_url }}') type("image/webp"),
           url('{{ "img/clicfit-ejercicios-en-casa-tablet.avif" | relative_url }}') type("image/avif")
@@ -128,7 +117,6 @@
   @media (max-width: 768px) {
     .header_hero {
       background: 
-        linear-gradient(135deg, rgba(74, 74, 114, 0.85) 0%, rgba(26, 26, 46, 0.9) 100%),
         image-set(
           url('{{ "img/clicfit-ejercicios-en-casa-mobile.webp" | relative_url }}') type("image/webp"),
           url('{{ "img/clicfit-ejercicios-en-casa-mobile.avif" | relative_url }}') type("image/avif")
