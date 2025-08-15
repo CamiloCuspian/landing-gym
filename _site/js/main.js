@@ -8,7 +8,6 @@ const WHATSAPP_CONFIG = {
   phone: '573164400207',
   messages: {
     es: 'Hola. Me gustaría recibir más información sobre los servicios que vi en tu página web. Gracias',
-    en: 'Hello. I would like to receive more information about the services I saw on your website. Thank you'
   }
 };
 
