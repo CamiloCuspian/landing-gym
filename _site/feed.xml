@@ -11,7 +11,11 @@
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
     <language>es-CO</language>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <lastBuildDate>Fri, 15 Aug 2025 05:30:04 -0500</lastBuildDate>
+=======
+    <lastBuildDate>Fri, 15 Aug 2025 05:23:22 -0500</lastBuildDate>
+>>>>>>> Stashed changes
 =======
     <lastBuildDate>Fri, 15 Aug 2025 05:23:22 -0500</lastBuildDate>
 >>>>>>> Stashed changes
