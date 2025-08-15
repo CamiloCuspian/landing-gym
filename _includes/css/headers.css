@@ -18,6 +18,12 @@
     
     .hero_content {
       width: min(100% - 600px);
+
+      ol, ol li, p{
+        margin: 0;
+      }
+
+      ol{margin-bottom: 1em;}
     }
 
     img {
