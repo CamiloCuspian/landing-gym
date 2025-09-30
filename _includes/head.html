@@ -10,7 +10,13 @@
   
   <!-- Descripción persuasiva para conversiones -->
   <meta name="description" content="{% if page.description %}{{page.description|strip_html| strip_newlines}}{% else %}Método científico para reducir riesgo cardiovascular. Resultados en 28 días o reembolso.{% endif %}">
-  
+
+  <!-- Palabras clave para SEO -->
+  <meta name="keywords" content="gimnasio colombia, ejercicios en casa, perder peso, transformación física, clicfit, método científico, riesgo cardiovascular, resultados reales">
+
+  <!-- URL canónica para evitar contenido duplicado -->
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+
   <!-- Configuración básica de robots -->
   <meta name="robots" content="follow, index">
   
@@ -59,13 +65,6 @@
   <link rel="dns-prefetch" href="https://www.googletagmanager.com">
   <link rel="dns-prefetch" href="https://www.google-analytics.com">
   <link rel="dns-prefetch" href="https://connect.facebook.net">
-  
-  <!-- Google Tag Manager para seguimiento de conversiones -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-XXXXXX');</script>
   
   <!-- Pixel de Facebook para seguimiento de conversiones -->
   <script>
@@ -202,4 +201,12 @@
     }
     
     </style>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MHDHLGLB');</script>
+    <!-- End Google Tag Manager -->
 </head>
